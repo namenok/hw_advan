@@ -57,7 +57,7 @@ else:
 
 
 
-#практична json
+#pract- json
 
 my_dict = dict(
     log1='pas1',
@@ -71,7 +71,7 @@ def serialized_json(json_data):
         json.dump(json_data, file)
 serialized_json(my_dict)
 
-#додавання даних до файлу
+
 my_second_dict = dict(
     log4='pas4',
     log5='pas5'
@@ -79,13 +79,12 @@ my_second_dict = dict(
 with open('json21.json', 'a') as file:
     json.dump(my_second_dict, file)
 
-#видалення усіх даних з файлу
+
 o = dict()
 with open('json21.json', 'w') as file:
-    json.dump(o, file) #видаляються дані, як перезапиc
+    json.dump(o, file)
 
-#пошук
-#знову завантажую туди дані, щоб було з чого шукати
+
 def serialized_json(json_data):
     with open('json21.json', 'w') as file:
         json.dump(json_data, file)
@@ -95,19 +94,17 @@ with open('json21.json', 'r') as file:
     if 'log3' in file:
         print('так, є такий ключ')
 
-#редагування - десеріалізую - видалю один елемент , засеріалізую, зберігається
 with open('json21.json', 'r') as file:
     json.load(file)
     del my_dict['log2']
     print(my_dict)
     json.dump(my_dict, file)
 
-#завантажити ( відобразити ?
-with open('json21.json', 'r') as file:
-    json.load(file)
-    file.read()
 
-#--------------------домашня робота----------------
+with open('json21.json', 'r') as file:
+    print(json.load(file))
+
+#--------------------hw----------------
 # 1
 
 my_dict = dict(
@@ -123,7 +120,7 @@ def serialized_json(json_data):
 
 serialized_json(my_dict)
 
-#додавання даних до файлу
+
 my_second_dict = dict(
     Germany='Berlin',
     Polska='Varshava'
@@ -131,13 +128,12 @@ my_second_dict = dict(
 with open('json21.json', 'a') as file:
     json.dump(my_second_dict, file)
 
-#видалення усіх даних з файлу
+
 o = dict()
 with open('json21.json', 'w') as file:
     json.dump(o, file)
 
-#пошук
-#знову завантажую туди дані, щоб було з чого шукати
+
 def serialized_json(json_data):
     with open('json21.json', 'w') as file:
         json.dump(json_data, file)
@@ -147,17 +143,15 @@ with open('json21.json', 'r') as file:
     if 'Germany' in file:
         print('так, є такий ключ')
 
-#редагування - десеріалізую - видалю один елемент , засеріалізую, зберігається
 with open('json21.json', 'r') as file:
     json.load(file)
     del my_dict['Polska']
     print(my_dict)
     json.dump(my_dict, file)
 
-#завантажити
+
 with open('json21.json', 'r') as file:
-    json.load(file)
-    file.read()
+    print(json.load(file))
 
 
 
@@ -177,7 +171,7 @@ def serialized_json(json_data):
 
 serialized_json(my_dict)
 
-#додавання даних до файлу
+
 my_second_dict = dict(
     grupaD='albomD',
     grupaS='albomS'
@@ -185,13 +179,10 @@ my_second_dict = dict(
 with open('json21.json', 'a') as file:
     json.dump(my_second_dict, file)
 
-#видалення усіх даних з файлу
 o = dict()
 with open('json21.json', 'w') as file:
     json.dump(o, file)
 
-#пошук
-#знову завантажую туди дані, щоб було з чого шукати
 def serialized_json(json_data):
     with open('json21.json', 'w') as file:
         json.dump(json_data, file)
@@ -201,14 +192,11 @@ with open('json21.json', 'r') as file:
     if 'grupaY' in file:
         print('так, є такий ключ')
 
-#редагування - десеріалізую - видалю один елемент , засеріалізую, зберігається
 with open('json21.json', 'r') as file:
     json.load(file)
     del my_dict['grupaD']
     print(my_dict)
     json.dump(my_dict, file)
 
-#завантажити
 with open('json21.json', 'r') as file:
-    json.load(file)
-    file.read()
+    print(json.load(file))
