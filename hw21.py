@@ -192,11 +192,12 @@ with open('json21.json', 'r') as file:
     if 'grupaY' in file:
         print('так, є такий ключ')
 
-with open('json21.json', 'r') as file:
-    json.load(file)
-    del my_dict['grupaD']
-    print(my_dict)
-    json.dump(my_dict, file)
+with open('json21.json', 'r') as values:
+    val_content = json.load(values)
+
+with open('json21.json', 'w') as fi:
+    del val_content[3]
+    fi.write(val_content)
 
 with open('json21.json', 'r') as file:
     print(json.load(file))
